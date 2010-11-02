@@ -1,0 +1,67 @@
+<h1>Listing parejas</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Nom el</th>
+    <th>Nom ella</th>
+    <th>Fch 1era asamblea</th>
+    <th>Fch nac el</th>
+    <th>Ocupacion el</th>
+    <th>Movil el</th>
+    <th>Email el</th>
+    <th>Fch nac ella</th>
+    <th>Ocupacion ella</th>
+    <th>Movil ella</th>
+    <th>Email ella</th>
+    <th>Fch matrimonio</th>
+    <th>Residencia</th>
+    <th>Tel casa</th>
+    <th>Hijos vivos</th>
+    <th>Perdidas</th>
+    <th>Invitados por</th>
+    <th>Ministerio</th>
+    <th>Retiro1</th>
+    <th>Retiro2</th>
+    <th>Retiro3</th>
+    <th>Retiro4</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @parejas.each do |pareja| %>
+  <tr>
+    <td><%= pareja.codigo %></td>
+    <td><%= pareja.nom_el %></td>
+    <td><%= pareja.nom_ella %></td>
+    <td><%= pareja.fch_1era_asamblea %></td>
+    <td><%= pareja.fch_nac_el %></td>
+    <td><%= pareja.ocupacion_el %></td>
+    <td><%= pareja.movil_el %></td>
+    <td><%= pareja.email_el %></td>
+    <td><%= pareja.fch_nac_ella %></td>
+    <td><%= pareja.ocupacion_ella %></td>
+    <td><%= pareja.movil_ella %></td>
+    <td><%= pareja.email_ella %></td>
+    <td><%= pareja.fch_matrimonio %></td>
+    <td><%= pareja.residencia %></td>
+    <td><%= pareja.tel_casa %></td>
+    <td><%= pareja.hijos_vivos %></td>
+    <td><%= pareja.perdidas %></td>
+    <td><%= pareja.invitados_por %></td>
+    <td><%= pareja.ministerio %></td>
+    <td><%= pareja.retiro1 %></td>
+    <td><%= pareja.retiro2 %></td>
+    <td><%= pareja.retiro3 %></td>
+    <td><%= pareja.retiro4 %></td>
+    <td><%= link_to 'Show', pareja %></td>
+    <td><%= link_to 'Edit', edit_pareja_path(pareja) %></td>
+    <td><%= link_to 'Destroy', pareja, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pareja', new_pareja_path %>

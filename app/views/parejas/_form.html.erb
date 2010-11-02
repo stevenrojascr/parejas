@@ -1,0 +1,109 @@
+<%= form_for(@pareja) do |f| %>
+  <% if @pareja.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pareja.errors.count, "error") %> prohibited this pareja from being saved:</h2>
+
+      <ul>
+      <% @pareja.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nom_el %><br />
+    <%= f.text_field :nom_el %>
+  </div>
+  <div class="field">
+    <%= f.label :nom_ella %><br />
+    <%= f.text_field :nom_ella %>
+  </div>
+  <div class="field">
+    <%= f.label :fch_1era_asamblea %><br />
+    <%= f.date_select :fch_1era_asamblea %>
+  </div>
+  <div class="field">
+    <%= f.label :fch_nac_el %><br />
+    <%= f.date_select :fch_nac_el %>
+  </div>
+  <div class="field">
+    <%= f.label :ocupacion_el %><br />
+    <%= f.text_field :ocupacion_el %>
+  </div>
+  <div class="field">
+    <%= f.label :movil_el %><br />
+    <%= f.text_field :movil_el %>
+  </div>
+  <div class="field">
+    <%= f.label :email_el %><br />
+    <%= f.text_field :email_el %>
+  </div>
+  <div class="field">
+    <%= f.label :fch_nac_ella %><br />
+    <%= f.date_select :fch_nac_ella %>
+  </div>
+  <div class="field">
+    <%= f.label :ocupacion_ella %><br />
+    <%= f.text_field :ocupacion_ella %>
+  </div>
+  <div class="field">
+    <%= f.label :movil_ella %><br />
+    <%= f.text_field :movil_ella %>
+  </div>
+  <div class="field">
+    <%= f.label :email_ella %><br />
+    <%= f.text_field :email_ella %>
+  </div>
+  <div class="field">
+    <%= f.label :fch_matrimonio %><br />
+    <%= f.date_select :fch_matrimonio %>
+  </div>
+  <div class="field">
+    <%= f.label :residencia %><br />
+    <%= f.text_field :residencia %>
+  </div>
+  <div class="field">
+    <%= f.label :tel_casa %><br />
+    <%= f.text_field :tel_casa %>
+  </div>
+  <div class="field">
+    <%= f.label :hijos_vivos %><br />
+    <%= f.text_field :hijos_vivos %>
+  </div>
+  <div class="field">
+    <%= f.label :perdidas %><br />
+    <%= f.text_field :perdidas %>
+  </div>
+  <div class="field">
+    <%= f.label :invitados_por %><br />
+    <%= f.text_field :invitados_por %>
+  </div>
+  <div class="field">
+    <%= f.label :ministerio %><br />
+    <%= f.text_field :ministerio %>
+  </div>
+  <div class="field">
+    <%= f.label :retiro1 %><br />
+    <%= f.check_box :retiro1 %>
+  </div>
+  <div class="field">
+    <%= f.label :retiro2 %><br />
+    <%= f.check_box :retiro2 %>
+  </div>
+  <div class="field">
+    <%= f.label :retiro3 %><br />
+    <%= f.check_box :retiro3 %>
+  </div>
+  <div class="field">
+    <%= f.label :retiro4 %><br />
+    <%= f.check_box :retiro4 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
