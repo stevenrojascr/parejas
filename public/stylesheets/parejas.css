@@ -7,7 +7,7 @@ padding: 5px;
 vertical-align: top; 
 } 
 #pareje-lista .lista-codigo {
-width: 60%;
+width: 40%;
 }
 #pareja-lista .lista-codigo dl { 
 margin: 0; 
@@ -17,12 +17,15 @@ color: #244;
 font-weight: bold; 
 font-size: larger; 
 }
+#pareja-lista .lista-codigo dd { 
+margin: 0; 
+}
 #pareja-lista .lista-imagen { 
 width: 60px; 
 height: 70px; 
 } 
 #pareja-lista .lista-nombre { 
-width: 60%; 
+width: 40%; 
 } 
 #pareja-lista .lista-nombre dl { 
 margin: 0; 
@@ -43,6 +46,24 @@ padding-left: 1em;
 #pareja-lista .lista-linea-par { 
 background: #e0f8f8; 
 } 
-#pareja-lista .list-linea-impar { 
-background: #f8b0f8; 
+#pareja-lista .lista-linea-impar { 
+background: #ffffff; 
 } 
+
+/* Estilos para banner */
+
+#banner {
+  background: #9c9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
+  text-align: center;
+}
+
+#banner img {
+	width: 45px; 
+	height: 45px;
+	float: left;
+}

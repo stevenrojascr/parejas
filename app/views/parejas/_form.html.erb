@@ -1,7 +1,7 @@
 <%= form_for(@pareja) do |f| %>
   <% if @pareja.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@pareja.errors.count, "error") %> prohibited this pareja from being saved:</h2>
+      <h2><%= pluralize(@pareja.errors.count, "error") %> Datos de pareja no pasa validación:</h2>
 
       <ul>
       <% @pareja.errors.full_messages.each do |msg| %>

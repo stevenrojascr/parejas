@@ -8,7 +8,8 @@
       <td class="lista-codigo">
         <dl>
           <dt><%=h pareja.codigo %></dt>
-         </dl>
+		  <dd><%=h pareja.fch_1era_asamblea%></dd>
+        </dl>
       </td>
 
       <td class="lista-nombre">
@@ -31,7 +32,7 @@
         <%= link_to 'Mostrar', pareja %><br/>
         <%= link_to 'Editar', edit_pareja_path(pareja) %><br/>
         <%= link_to 'Borrar', pareja, 
-                    :confirm => 'Esta seguro?',
+                    :confirm => 'Está seguro?',
                     :method => :delete %>
       </td>
     </tr>

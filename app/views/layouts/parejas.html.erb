@@ -9,9 +9,13 @@
 </head>
 <body>
 
-<p style="color: green"><%= flash[:notice] %></p>
+	<p style="color: green"><%= flash[:notice] %></p>
+	<div id="banner">
+		<%= image_tag("logo_matrimonios.jpg")%>
+		<%= @page_title || "Matrimonios en Victoria - Pozos"%>
+	</div>
 
-<%= yield  %>
+	<%= yield  %>
 
 </body>
 </html>
