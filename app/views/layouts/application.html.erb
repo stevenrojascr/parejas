@@ -2,13 +2,21 @@
 <html>
 <head>
   <title>Parejas</title>
-  <%= stylesheet_link_tag :all %>
+<!-- START:stylesheet -->
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag "parejas", :media => "all" %>
+<!-- END:stylesheet -->
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 
-<%= yield %>
+	<div id="banner">
+		<%= image_tag("logo_matrimonios.jpg")%>
+		<%= @page_title || "Matrimonios en Victoria - Pozos"%>
+	</div>
+	
+	<%= yield %>
 
 </body>
 </html>

@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <%= image_tag @pareja.foto.url (:medium)%>
+</p>
+
+<p>
   <b>Codigo:</b>
   <%= @pareja.codigo %>
 </p>

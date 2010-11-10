@@ -31,6 +31,10 @@ GEM
     annotate-models (1.0.4)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -41,6 +45,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    paperclip (2.3.5)
+      activerecord
+      activesupport
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -66,11 +73,14 @@ GEM
     treetop (1.4.8)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   annotate-models (= 1.0.4)
+  aws-s3
+  paperclip
   rails (= 3.0.0)
   sqlite3-ruby
