@@ -11,35 +11,32 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :Código %><br />
+    <%= f.label :Código %>
     <%= f.text_field :codigo %>
 	<%= f.file_field :foto %>
-  </div>
-  <div class="field">
-    <%= f.label :Fecha_1era_asamblea %><br />
+
+    <%= f.label :Fecha_1era_asamblea %>
     <%= f.date_select :fch_1era_asamblea %>
   </div>
 
 	<fieldset>
 		<legend> DATOS DEL ESPOSO</legend>
 		<div class="field">
-			<%= f.label :Nombre %><br />
+			<%= f.label :Nombre %>
 			<%= f.text_field :nom_el %>
-		</div>
-		<div class="field">
-			<%= f.label :Fecha_de_nacimiento %><br />
+
+			<%= f.label :Fecha_de_nacimiento %>
 			<%= f.date_select :fch_nac_el %>
 		</div>
 		<div class="field">
-			<%= f.label :Ocupación %><br />
+			<%= f.label :Ocupación %>
 			<%= f.text_field :ocupacion_el %>
 		</div>
 		<div class="field">
-			<%= f.label :Teléfono_celular %><br />
+			<%= f.label :Teléfono_celular %>
 			<%= f.text_field :movil_el %>
-		</div>
-		<div class="field">
-			<%= f.label :Correo_electrónico %><br />
+
+			<%= f.label :Correo_electrónico %>
 			<%= f.text_field :email_el %>
 		</div>
 	</fieldset>
@@ -47,23 +44,21 @@
 	<fieldset>
 		<legend> DATOS DE LA ESPOSA</legend>
 		<div class="field">
-			<%= f.label :Nombre %><br />
+			<%= f.label :Nombre %>
 			<%= f.text_field :nom_ella %>
-		</div>
-		<div class="field">
-		  <%= f.label :Fecha_de_nacimiento %><br />
+
+		  <%= f.label :Fecha_de_nacimiento %>
 		  <%= f.date_select :fch_nac_ella %>
 		</div>
 		<div class="field">
-		  <%= f.label :Ocupación %><br />
+		  <%= f.label :Ocupación %>
 		  <%= f.text_field :ocupacion_ella %>
 		</div>
 		<div class="field">
-		  <%= f.label :Teléfono_celular %><br />
+		  <%= f.label :Teléfono_celular %>
 		  <%= f.text_field :movil_ella %>
-		</div>
-		<div class="field">
-		  <%= f.label :Correo_electrónico %><br />
+
+		  <%= f.label :Correo_electrónico %>
 		  <%= f.text_field :email_ella %>
 		</div>
 	</fieldset>
@@ -71,15 +66,14 @@
 	<fieldset>
 		<legend> DATOS DE AMBOS </legend>
 		<div class="field">
-		  <%= f.label :Lugar_de_residencia %><br />
+		  <%= f.label :Lugar_de_residencia %>
 		  <%= f.text_field :residencia %>
-		</div>
-		<div class="field">
-		  <%= f.label :Teléfono_de_la_casa %><br />
+
+		  <%= f.label :Teléfono_de_la_casa %>
 		  <%= f.text_field :tel_casa %>
 		</div>
 		<div class="field">
-		 <%= f.label :Fecha_de_matrimonio %><br />
+		 <%= f.label :Fecha_de_matrimonio %>
 		 <%= f.date_select :fch_matrimonio %>
 		</div>
 	</fieldset
@@ -87,39 +81,34 @@
 	<fieldset>
 		<legend> OTROS DATOS </legend>
 		<div class="field">
-		  <%= f.label :Cantidad_de_hijos %><br />
+		  <%= f.label :Cantidad_de_hijos %>
 		  <%= f.text_field :hijos_vivos %>
-		</div>
-		<div class="field">
-		  <%= f.label :Cantidad_de_perdidas %><br />
+
+		  <%= f.label :Cantidad_de_perdidas %>
 		  <%= f.text_field :perdidas %>
 		</div>
 		<div class="field">
-		  <%= f.label :Invitados_por %><br />
+		  <%= f.label :Invitados_por %>
 		  <%= f.text_field :invitados_por %>
-		</div>
-		<div class="field">
-		  <%= f.label :Ministerio %><br />
+
+		  <%= f.label :Ministerio %>
 		  <%= f.text_field :ministerio %>
 		</div>
 		<div class="field">
-		  <%= f.label :retiro1 %><br />
+		  <%= f.label :retiro1 %>
 		  <%= f.check_box :retiro1 %>
-		</div>
-		<div class="field">
-		  <%= f.label :retiro2 %><br />
+
+		  <%= f.label :retiro2 %>
 		  <%= f.check_box :retiro2 %>
-		</div>
-		<div class="field">
-		  <%= f.label :retiro3 %><br />
+
+		  <%= f.label :retiro3 %>
 		  <%= f.check_box :retiro3 %>
-		</div>
-		<div class="field">
-		  <%= f.label :retiro4 %><br />
+
+		  <%= f.label :retiro4 %>
 		  <%= f.check_box :retiro4 %>
 		</div>
 	</fieldset>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Actualizar Pareja" %>
   </div>
 <% end %>
