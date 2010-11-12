@@ -16,7 +16,7 @@
 	<%= f.file_field :foto %>
 
     <%= f.label :Fecha_1era_asamblea %>
-    <%= f.date_select :fch_1era_asamblea %>
+    <%= f.date_select :fch_1era_asamblea, :start_year => 2010 %>
   </div>
 
 	<fieldset>
@@ -26,7 +26,7 @@
 			<%= f.text_field :nom_el %>
 
 			<%= f.label :Fecha_de_nacimiento %>
-			<%= f.date_select :fch_nac_el %>
+			<%= f.date_select :fch_nac_el, :start_year => Date.current.year - 85, :end_year => Date.current.year - 15 %>
 		</div>
 		<div class="field">
 			<%= f.label :Ocupación %>
@@ -48,7 +48,7 @@
 			<%= f.text_field :nom_ella %>
 
 		  <%= f.label :Fecha_de_nacimiento %>
-		  <%= f.date_select :fch_nac_ella %>
+		  <%= f.date_select :fch_nac_ella, :start_year => Date.current.year - 85, :end_year => Date.current.year - 15 %>
 		</div>
 		<div class="field">
 		  <%= f.label :Ocupación %>
@@ -74,7 +74,7 @@
 		</div>
 		<div class="field">
 		 <%= f.label :Fecha_de_matrimonio %>
-		 <%= f.date_select :fch_matrimonio %>
+		 <%= f.date_select :fch_matrimonio, :start_year => Date.current.year - 70 %>
 		</div>
 	</fieldset
 	
