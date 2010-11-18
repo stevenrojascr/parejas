@@ -40,6 +40,6 @@ class Pareja < ActiveRecord::Base
   :path => ":attachment/:id/:style.:extension",
   :bucket => 'fotosparejas'
   
-  default_scope :order => 'id'
+  default_scope :order => 'codigo'
 end
 
