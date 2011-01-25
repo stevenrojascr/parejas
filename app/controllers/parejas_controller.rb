@@ -81,3 +81,4 @@ class ParejasController < ApplicationController
     end
   end
 end
+

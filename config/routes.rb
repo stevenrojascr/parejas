@@ -1,4 +1,6 @@
 Parejas::Application.routes.draw do
+  get "reportes/index"
+
   resources :parejas
 
   # The priority is based upon order of creation:

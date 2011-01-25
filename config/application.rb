@@ -38,5 +38,11 @@ module Parejas
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    config.middleware.use "PDFKit::Middleware"
+    PDFKit.configure do |config|
+      config.wkhtmltopdf =
+      '/Users/stevenrojascr/.rvm/gems/ruby-1.8.7-p302/bin/wkhtmltopdf'
+    end
   end
 end

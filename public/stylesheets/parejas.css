@@ -6,6 +6,7 @@ border-collapse: collapse;
 padding: 5px; 
 vertical-align: top; 
 } 
+
 #pareje-lista .lista-codigo {
 
 }
@@ -36,6 +37,7 @@ color: #244;
 font-weight: bold; 
 font-size: larger; 
 } 
+
 #pareja-lista .lista-nombre dd { 
 margin: 0; 
 } 
@@ -46,8 +48,25 @@ padding-left: 1em;
 } 
 #pareja-lista .lista-linea-par { 
 background: #e0f8f8; 
-} 
+}
+
 #pareja-lista .lista-linea-impar { 
+background: #ffffff; 
+}
+
+
+#pareja-lista-repo table { 
+border-collapse: collapse; 
+} 
+#pareja-lista-repo table tr td { 
+padding: 1px; 
+vertical-align: top;
+border:1px solid black; 
+}
+#pareja-lista-repo .lista-linea-par-repo { 
+background: #cccccc; 
+}
+#pareja-lista-repo .lista-linea-impar-repo { 
 background: #ffffff; 
 } 
 
@@ -58,13 +77,13 @@ background: #ffffff;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
+  font: small-caps 30px/30px "Times New Roman", serif;
   color: #282;
   text-align: center;
 }
 
 #banner img {
 	width: 45px; 
-	height: 45px;
+	height: 40px;
 	float: left;
 }
