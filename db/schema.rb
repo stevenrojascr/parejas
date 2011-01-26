@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101109022620) do
+ActiveRecord::Schema.define(:version => 20110126003055) do
+
+  create_table "eventos", :force => true do |t|
+    t.string   "codigo"
+    t.date     "fecha"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "parejas", :force => true do |t|
     t.string    "codigo"
@@ -43,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20101109022620) do
     t.string    "foto_file_name"
     t.string    "foto_content_type"
     t.integer   "foto_file_size"
-    t.datetime  "foto_updated_at"
+    t.timestamp "foto_updated_at"
   end
 
 end

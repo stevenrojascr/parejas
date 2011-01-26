@@ -1,4 +1,6 @@
 Parejas::Application.routes.draw do
+  resources :eventos
+
   get "reportes/index"
 
   resources :parejas
