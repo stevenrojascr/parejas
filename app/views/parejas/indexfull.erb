@@ -32,16 +32,13 @@
         </dl>
       </td>
 
-	<% if false %>
-		<td class="lista-acciones">
+      <td class="lista-acciones">
         <%= link_to 'Mostrar', pareja %><br/>
-		<%= link_to 'Editar', edit_pareja_path(pareja) %><br/>
+        <%= link_to 'Editar', edit_pareja_path(pareja) %><br/>
         <%= link_to 'Borrar', pareja, 
                     :confirm => 'Está seguro?',
-                   :method => :delete %>
-		</td>
-	<% end %>
-	
+                    :method => :delete %>
+      </td>
     </tr>
   <% end %>
   </table>
@@ -49,6 +46,5 @@
 
 <br />
 
-	<% if false %>
 <%= link_to 'Nueva pareja', new_pareja_path %>
-	<% end %>
+
