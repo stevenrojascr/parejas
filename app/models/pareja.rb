@@ -34,6 +34,7 @@
 #
 
 class Pareja < ActiveRecord::Base
+  has_and_belongs_to_many :eventos
   has_attached_file :foto, :styles => { :medium => "300x300>", :thumb => "100x100>" },
   :storage => :s3,
   :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
