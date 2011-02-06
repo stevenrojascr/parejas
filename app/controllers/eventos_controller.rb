@@ -80,4 +80,10 @@ class EventosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def asistencia
+    @evento = Evento.find(params[:id])
+  
+  end
+  
 end

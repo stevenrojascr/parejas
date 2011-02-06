@@ -13,8 +13,10 @@
   <tr>
     <td><%= evento.codigo %></td>
     <td><%= evento.fecha %></td>
+    <td><%= evento.parejas.count %></td>
     <td><%= link_to 'Mostrar', evento %></td>
     <td><%= link_to 'Editar', edit_evento_path(evento) %></td>
+    <td><%= link_to 'Asistencia', asistencia_path (:id => evento.id) %></td>
     <td><%= link_to 'Borrar', evento, :confirm => 'Está seguro?', :method => :delete %></td>
   </tr>
 <% end %>

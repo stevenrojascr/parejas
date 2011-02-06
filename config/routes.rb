@@ -1,9 +1,16 @@
 Parejas::Application.routes.draw do
   resources :eventos
 
-  get "reportes/index"
-
   resources :parejas
+
+  match "/hoja_asistencia" => "reportes#index"
+  
+  match "/asistencia" => "eventos#asistencia"
+
+  match "/asistencia_pareja" => "parejas#asistencia"
+  
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

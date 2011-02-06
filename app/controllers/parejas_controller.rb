@@ -80,5 +80,11 @@ class ParejasController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def asistencia
+    @pareja = Pareja.find(params[:id]) 
+  
+  end
+  
 end
 

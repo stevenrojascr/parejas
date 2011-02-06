@@ -12,15 +12,8 @@
 <body>
 
 	<div id="banner">
-		<%= image_tag("logo_matrimonios.jpg")%>
 		<%= @page_title || "Matrimonios en Victoria - Pozos"%>
-		<table>
-		  <tr>
-			<td> <%= link_to 'Parejas', parejas_path %> </td>
-			<td> <%= link_to 'Asambleas', eventos_path %> </td>
-			<td> <%= link_to 'Hoja de Asistencia', hoja_asistencia_path (:format => "pdf") %> </td>
-		  </tr>
-		</table>
+
 	</div>
 	
 	<%= yield %>
