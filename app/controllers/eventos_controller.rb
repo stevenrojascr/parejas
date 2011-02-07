@@ -56,6 +56,8 @@ class EventosController < ApplicationController
   # PUT /eventos/1
   # PUT /eventos/1.xml
   def update
+    params[:evento][:pareja_ids] ||= []
+    
     @evento = Evento.find(params[:id])
 
     respond_to do |format|
