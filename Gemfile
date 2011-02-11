@@ -5,6 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'paperclip'
 gem 'aws-s3'
 gem 'pdfkit'
+gem 'devise'
 
 
 group :development do

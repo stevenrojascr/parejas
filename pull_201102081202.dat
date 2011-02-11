@@ -1,0 +1,1 @@
+{"stream_state":{},"completed_tables":[],"remote_tables_info":{"eventos_parejas":1649,"schema_migrations":7,"parejas":116,"eventos":49},"remote_url":"http://heroku:osui59a24am79x@taps3.heroku.com","table_filter":null,"session_uri":"/sessions/9542135897","database_url":"sqlite://db/development.sqlite3","klass":"Taps::Pull"}

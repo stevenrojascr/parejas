@@ -1,4 +1,6 @@
 Parejas::Application.routes.draw do
+  devise_for :users
+
   resources :eventos
 
   resources :parejas
@@ -9,7 +11,7 @@ Parejas::Application.routes.draw do
 
   match "/asistencia_pareja" => "parejas#asistencia"
   
-  
+  root :to => "parejas#index"
 
 
   # The priority is based upon order of creation:

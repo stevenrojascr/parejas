@@ -42,5 +42,6 @@ class Pareja < ActiveRecord::Base
   :bucket => 'fotosparejas'
   
   default_scope :order => 'codigo'
+  
 end
 

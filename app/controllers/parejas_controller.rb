@@ -1,4 +1,5 @@
 class ParejasController < ApplicationController
+  before_filter :authenticate_user!, :except => :index
   # GET /parejas
   # GET /parejas.xml
   def index
