@@ -1,5 +1,5 @@
 <div id="pareja-lista">
-  <h1>Lista de Parejas</h1>
+  <h3>Reporte de Parejas Activas ( <%= Date.today.strftime("%d/%m/%Y") %> )</h3>
 
   <table>
   <% @parejas.each do |pareja| %>
@@ -10,10 +10,6 @@
           <dt><%=h pareja.codigo %></dt>
 		  <dd><%=h pareja.fch_1era_asamblea%></dd>
         </dl>
-      </td>
-
-      <td>
-       <%= image_tag pareja.foto.url (:thumb)%>
       </td>
 
 		<% eventos = pareja.eventos %>
@@ -27,7 +23,7 @@
           <dt><%=h pareja.nom_el %></dt>
           <dd><%=h pareja.email_el %></dd>
           <dd><%=h pareja.movil_el %></dd>
-         <dd><%=h lista %></dd>
+         <dd>Asistencia (#mes): <%=h lista %></dd>
         </dl>
       </td>
 
@@ -39,24 +35,9 @@
         </dl>
       </td>
 
-		<td class="lista-acciones">
-			<%= link_to 'Asistencia', asistencia_pareja_path(:id => pareja.id) %><br/>
-			<% if true %>
-        		<%= link_to 'Mostrar', pareja %><br/>
-				<%= link_to 'Editar', edit_pareja_path(pareja) %><br/>
-        		<%= link_to 'Borrar', pareja, 
-                    :confirm => 'Está seguro?',
-                   :method => :delete %>
-			<% end %>
-		</td>
-	
     </tr>
   <% end %>
   </table>
 </div>
 
 <br />
-
-	<% if true %>
-<%= link_to 'Nueva pareja', new_pareja_path %>
-	<% end %>

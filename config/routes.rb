@@ -7,6 +7,7 @@ Parejas::Application.routes.draw do
   resources :parejas
 
   match "/hoja_asistencia" => "reportes#index"
+  match "/parejas_activas" => "reportes#parejas_activas"
   
   match "/asistencia" => "eventos#asistencia"
 

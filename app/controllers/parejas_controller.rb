@@ -4,7 +4,7 @@ class ParejasController < ApplicationController
   # GET /parejas
   # GET /parejas.xml
   def index
-    @parejas = Pareja.all
+    @parejas = Pareja.find(:all, :conditions => "activo = 't'")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -27,6 +27,7 @@ class ParejasController < ApplicationController
   # GET /parejas/new.xml
   def new
     @pareja = Pareja.new
+    @pareja.activo = true
 
     respond_to do |format|
       format.html # new.html.erb
