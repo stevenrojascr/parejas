@@ -1,4 +1,5 @@
 class ReportesController < ApplicationController
+   before_filter :authenticate_user!, :except => :index
   def index
     @parejas = Pareja.find(:all, :conditions => "activo='t'")
     hoy = Date.today
@@ -8,6 +9,10 @@ class ReportesController < ApplicationController
   end
 
   def parejas_activas
+    @parejas = Pareja.find(:all, :conditions => "activo='t'")
+  end
+
+  def parejas_activas_info
     @parejas = Pareja.find(:all, :conditions => "activo='t'")
   end
 end

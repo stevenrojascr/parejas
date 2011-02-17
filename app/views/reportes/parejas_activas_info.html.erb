@@ -1,0 +1,56 @@
+<div id="pareja-lista-repo">
+  <h3>Información parejas activas - <%= Date.today ("%d/%m/%Y") %></h3>
+
+  <table>
+	<th>No.</th>
+	<th>Esposo</th>
+	<th>Esposa</th>
+	<th>movil_el</th>
+	<th>movil_ella</th>
+	<th>email_el</th>
+	<th>email_ella</th>
+	<th>tel_casa</th>
+
+	<% @parejas.each do |pareja| %>
+    <tr class="<%= cycle('lista-linea-impar', 'lista-linea-par-repo') %>">
+
+      <td>
+		<%=h pareja.codigo %>
+      </td>
+
+      <td>
+        <%=h pareja.nom_el %>
+      </td>
+
+      <td>
+        <%=h pareja.nom_ella %>
+      </td>
+
+      <td>
+        <%=h pareja.movil_el %>
+      </td>
+      <td>
+        <%=h pareja.movil_ella %>
+      </td>
+
+      <td>
+        <%=h pareja.email_el %>
+      </td>
+
+      <td>
+        <%=h pareja.email_ella %>
+      </td>
+
+      <td>
+        <%=h pareja.tel_casa %>
+      </td>
+
+
+
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
