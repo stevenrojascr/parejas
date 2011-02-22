@@ -23,7 +23,7 @@
     <%= f.submit "Actualizar Asamblea"%>
   </div>
 
-  <% for pareja in Pareja.find(:all) %>  
+  <% for pareja in Pareja.find(:all, :conditions => "activo='t'") %>  
     <div>  
       <%= check_box_tag "evento[pareja_ids][]", pareja.id, @evento.parejas.include?(pareja) %>  
       <%= pareja.codigo + "-->" + pareja.nom_el + " | " + pareja.nom_ella %>  
