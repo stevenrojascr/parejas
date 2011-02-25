@@ -17,9 +17,9 @@ class ReportesController < ApplicationController
   end
   
   def parejas_aniversarios_mes
-    @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and strftime('%m', fch_matrimonio) = ?", Date.today.strftime("%m")])
-    @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and strftime('%m', fch_nac_el) = ?", Date.today.strftime("%m")])
-    @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and strftime('%m', fch_nac_ella) = ?", Date.today.strftime("%m")])
+    @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_matrimonio) = ?", Date.today.strftime("%m")])
+    @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_el) = ?", Date.today.strftime("%m")])
+    @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_ella) = ?", Date.today.strftime("%m")])
 
   end
 
