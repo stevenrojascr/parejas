@@ -21,7 +21,6 @@ class ReportesController < ApplicationController
     @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and strftime('%m', fch_nac_el) = ?", Date.today.strftime("%m")])
     @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and strftime('%m', fch_nac_ella) = ?", Date.today.strftime("%m")])
 
-#bdays = Soldier.find(:all, :conditions => ["STRFTIME('%d', birth_date) = ? AND STRFTIME('%m', birth_date) = ?", Date.today.day, Date.today.month])
   end
 
   
