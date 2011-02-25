@@ -39,7 +39,8 @@ class Pareja < ActiveRecord::Base
   :storage => :s3,
   :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
   :path => ":attachment/:id/:style.:extension",
-  :bucket => 'fotosparejas'
+  :bucket => 'fotosparejas',
+  :default_url => '/images/:attachment/silueta_:style.jpg'
   
   default_scope :order => 'codigo'
   

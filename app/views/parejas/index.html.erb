@@ -16,18 +16,11 @@
        <%= image_tag pareja.foto.url (:thumb)%>
       </td>
 
-		<% eventos = pareja.eventos %>
-		<% lista = "" %>
-		<% eventos.each do |evento|
-		lista = lista + "." + evento.fecha.month.to_s
-		end %>
-
       <td class="lista-nombre">
         <dl>
           <dt><%=h pareja.nom_el %></dt>
           <dd><%=h pareja.email_el %></dd>
           <dd><%=h pareja.movil_el %></dd>
-         <dd><%=h lista %></dd>
         </dl>
       </td>
 
