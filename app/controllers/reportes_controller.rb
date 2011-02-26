@@ -18,9 +18,9 @@ class ReportesController < ApplicationController
   
   def parejas_aniversarios_mes
     mes = Date.today.month
-    @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and (EXTRACT(month FROM 'fch_matrimonio') = ?)", mes])
-    @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and (EXTRACT(month FROM 'fch_nac_el') = ?)", mes])
-    @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and (EXTRACT(month FROM 'fch_nac_ella') = ?)", mes])
+    @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and (date_part('month', fch_matrimonio) = ?)", mes])
+    @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and (date_part('month', fch_nac_el) = ?)", mes])
+    @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and (date_part('month', fch_nac_ella) = ?)", mes])
 
   end
 #EXTRACT(month FROM "date") = 2
