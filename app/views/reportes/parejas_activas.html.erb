@@ -1,5 +1,6 @@
 <div id="pareja-lista">
-  <h3>Reporte de Parejas Activas ( <%= Date.today.strftime("%d/%m/%Y") %> )</h3>
+  <h2>Asistencia de Parejas Activas ( <%= Date.today.strftime("%d/%m/%Y") %> )</h2>
+	<h4>Nota: Cada número entre puntos indica que la pareja asistió a una asamblea dentro de ese mes. Ej: Asist.(48) .1.1.2.2.2.2 indica que la pareja ha asistido a 48 asambleas, iniciando con dos asambleas en enero, cuatro en febrero, etc. </h4>
 
   <table>
   <% @parejas.each do |pareja| %>
@@ -8,9 +9,15 @@
       <td class="lista-codigo">
         <dl>
           <dt><%=h pareja.codigo %></dt>
+		  <dd>Fecha 1era Asamblea:</dd>
 		  <dd><%=h pareja.fch_1era_asamblea%></dd>
         </dl>
       </td>
+
+      <td>
+       <%= image_tag pareja.foto.url (:thumb)%>
+      </td>
+
 
 		<% eventos = pareja.eventos %>
 		<% lista = "" %>
@@ -23,7 +30,7 @@
           <dt><%=h pareja.nom_el %></dt>
           <dd><%=h pareja.email_el %></dd>
           <dd><%=h pareja.movil_el %></dd>
-         <dd>Asistencia (#mes): <%=h lista %></dd>
+         <dd>Asist.(<%=h eventos.count %>) <%=h lista %></dd>
         </dl>
       </td>
 

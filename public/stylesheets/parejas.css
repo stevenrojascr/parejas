@@ -7,7 +7,7 @@ padding: 5px;
 vertical-align: top; 
 } 
 
-#pareje-lista .lista-codigo {
+#pareja-lista .lista-codigo {
 
 }
 #pareja-lista .lista-codigo dl { 
@@ -87,3 +87,9 @@ background: #ffffff;
 	height: 40px;
 	float: left;
 }
+
+#link-menu {
+	font-size: 60%; 
+	text-align: right; 
+	padding-left: 1em; 
+	}

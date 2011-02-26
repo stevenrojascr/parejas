@@ -1,5 +1,5 @@
 class EventosController < ApplicationController
-  before_filter :authenticate_user!, :except => :index
+  before_filter :authenticate_user! #, :except => :index
   
   # GET /eventos
   # GET /eventos.xml
