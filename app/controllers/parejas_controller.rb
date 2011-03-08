@@ -48,7 +48,7 @@ class ParejasController < ApplicationController
 
     respond_to do |format|
       if @pareja.save
-        format.html { redirect_to(@pareja, :notice => 'Pareja was successfully created.') }
+        format.html { redirect_to(@pareja, :notice => 'Pareja creada exitosamente.') }
         format.xml  { render :xml => @pareja, :status => :created, :location => @pareja }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class ParejasController < ApplicationController
 
     respond_to do |format|
       if @pareja.update_attributes(params[:pareja])
-        format.html { redirect_to(@pareja, :notice => 'Pareja was successfully updated.') }
+        format.html { redirect_to(@pareja, :notice => 'Pareja actualizada exitosamente.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

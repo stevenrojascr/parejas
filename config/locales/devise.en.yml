@@ -4,6 +4,9 @@ en:
       not_found: "no encontrado"
       already_confirmed: "fue confirmada"
       not_locked: "no fue bloqueada"
+      not_saved:
+          one: "%{model} no pudo guardarse debido a 1 error"
+          other: "%{model} no pudo guardarse debido a %{count} errores"       
 
   devise:
     failure:
@@ -15,8 +18,17 @@ en:
       timeout: 'Su sesión expiró, ingrese de nuevo para continuar.'
       inactive: 'Su cuenta no ha sido activada todavía.'
     sessions:
-      signed_in: 'Ingreso exitoso.'
-      signed_out: 'Salida exitosa.'
+      link: 'Ingresar'
+      signed_in: 'Has ingresado correctamente.'
+      signed_out: 'Has salido correctamente.'
+      unauthenticated: 'Debes ingresar como usuario registrado antes de continuar.'
+      unconfirmed: 'Debes confirmar '
+      locked: 'Tu cuenta est&aacute; boqueada.'
+      invalid: 'El usuario y/o la contrase&ntilde;a son incorrectos.'
+      invalid_token: 'Token de autenticaticaci&oacute;n incorrecto.'
+      timeout: 'Tu sesi&oacute;n ha caducado. Por favor, vuelve a ingresar.'
+      inactive: 'Tu cuenta todavia no ha sido activada.'
+
     passwords:
       send_instructions: 'En pocos minutos recibirá un correo con instrucciones para reingresar su clave.'
       updated: 'Su clave fue modificada exitosamente. Ha ingresado a su cuenta.'
@@ -24,7 +36,7 @@ en:
       send_instructions: 'En pocos minutos recibirá un correo con instrucciones para confirmar su cuenta.'
       confirmed: 'Su cuenta fue confirmada exitosamente. Ha ingresado a su cuenta.'
     registrations:
-      signed_up: 'Se ha registrado exitosamente. Un confirmación se enviará a su cuenta de correo.'
+      signed_up: 'Se ha registrado exitosamente. Una confirmación se enviará a su cuenta de correo.'
       updated: 'Ha modificado su cuenta exitosamente.'
       destroyed: 'Adios! Su cuenta fue cancelada.'
     unlocks:

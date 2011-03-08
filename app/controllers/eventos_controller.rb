@@ -49,7 +49,7 @@ class EventosController < ApplicationController
         format.html { redirect_to(@evento, :notice => 'Asamblea creada exitosamente.') }
         format.xml  { render :xml => @evento, :status => :created, :location => @evento }
       else
-        format.html { render :action => "Nuevo" }
+        format.html { render :action => "new" }
         format.xml  { render :xml => @evento.errors, :status => :unprocessable_entity }
       end
     end
@@ -67,7 +67,7 @@ class EventosController < ApplicationController
         format.html { redirect_to(@evento, :notice => 'Asamblea actualizada exitosamente.') }
         format.xml  { head :ok }
       else
-        format.html { render :action => "Editar" }
+        format.html { render :action => "edit" }
         format.xml  { render :xml => @evento.errors, :status => :unprocessable_entity }
       end
     end
