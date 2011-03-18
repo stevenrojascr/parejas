@@ -4,8 +4,8 @@ class ParejasController < ApplicationController
   # GET /parejas
   # GET /parejas.xml
   def index
-    #@parejas = Pareja.find(:all, :conditions => "activo = 't'")
-    @parejas = Pareja.find(:all) #Todas las parejas
+    @parejas = Pareja.find(:all, :conditions => "activo = 't'")
+    #@parejas = Pareja.find(:all) #Todas las parejas
 
     respond_to do |format|
       format.html # index.html.erb
