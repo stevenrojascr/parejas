@@ -23,6 +23,8 @@
 			<td id="link-menu"> <%= link_to 'Asistencia de Parejas Activas', parejas_activas_path %> </td> 
 			<td id="link-menu"> <%= link_to 'Información de Parejas Activas', parejas_activas_info_path %> </td>
 			<td id="link-menu"> <%= link_to 'Aniversarios del Mes', aniversarios_mes_path %> </td>
+			<td id="link-menu"> <%= link_to 'Celulares', parejas_tel_celulares_path %> </td>
+			<td id="link-menu"> <%= link_to 'Usuarios', users_path %> </td>
 		  </tr>
 		</table>
 	</div>
@@ -32,7 +34,6 @@
 	    Usuario <%= current_user.email %>.
 	    <%= link_to "Salir", destroy_user_session_path %>
 	  <% else %>
-	    <%= link_to "Registrarse", new_user_registration_path %> o <%= link_to "Ingresar", new_user_session_path %>
 	  <% end %>
 	</div>
 	

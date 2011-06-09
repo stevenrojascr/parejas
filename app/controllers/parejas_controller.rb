@@ -1,11 +1,16 @@
 class ParejasController < ApplicationController
   before_filter :authenticate_user! #, :except => :index
+  load_and_authorize_resource
+
   
   # GET /parejas
   # GET /parejas.xml
   def index
-    @parejas = Pareja.find(:all, :conditions => "activo = 't'")
-    #@parejas = Pareja.find(:all) #Todas las parejas
+    if params[:incluir_inactivas].blank?
+      @parejas = Pareja.find(:all, :conditions => "activo = 't'")
+    else
+      @parejas = Pareja.find(:all) #Todas las parejas
+    end
 
     respond_to do |format|
       format.html # index.html.erb

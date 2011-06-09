@@ -6,7 +6,7 @@ gem 'paperclip'
 gem 'aws-s3'
 gem 'pdfkit'
 gem 'devise'
-
+gem 'cancan'
 
 group :development do
 #	gem 'rspec-rails', '2.0.0.beta.19'

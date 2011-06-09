@@ -1,5 +1,6 @@
 class EventosController < ApplicationController
   before_filter :authenticate_user! #, :except => :index
+  load_and_authorize_resource
   
   # GET /eventos
   # GET /eventos.xml
@@ -49,7 +50,7 @@ class EventosController < ApplicationController
         format.html { redirect_to(@evento, :notice => 'Asamblea creada exitosamente.') }
         format.xml  { render :xml => @evento, :status => :created, :location => @evento }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "New" }
         format.xml  { render :xml => @evento.errors, :status => :unprocessable_entity }
       end
     end

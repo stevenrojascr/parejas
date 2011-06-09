@@ -1,6 +1,10 @@
 <div id="pareja-lista">
   <h1>Lista de Parejas</h1>
 
+<table>
+	<td id="link-menu">  <%= link_to 'Mostrar también Parejas Inactivas', parejas_path(:incluir_inactivas => 't') %> </td>
+</table>
+
   <table>
   <% @parejas.each do |pareja| %>
     <tr class="<%= cycle('lista-linea-impar', 'lista-linea-par') %>">

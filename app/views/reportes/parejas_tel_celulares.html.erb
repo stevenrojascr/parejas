@@ -1,0 +1,56 @@
+<div id="pareja-lista">
+  <h3>Reporte de Teléfonos celulares de parejas activas. ( <%= Date.today.strftime("%d/%m/%Y") %> )</h3>
+
+ <h4>I. CELULARES POR PAREJAS</h4>
+ 
+  <table>
+	<th>No de Pareja</th>
+	<th>Esposo</th>
+	<th>Esposa</th>
+	<th>Celular Esposo</th>
+	<th>Celular Esposa</th>
+
+	<% @parejas_tel_celulares.each do |pareja| %>
+    <tr class="<%= cycle('lista-linea-impar', 'lista-linea-par-repo') %>">
+
+      <td>
+		<%=h pareja.codigo %>
+      </td>
+
+      <td>
+        <%=h pareja.nom_el %>
+      </td>
+
+      <td>
+        <%=h pareja.nom_ella %>
+      </td>
+
+      <td>
+        <%=h pareja.movil_el%>
+      </td>
+
+      <td>
+        <%=h pareja.movil_ella%>
+      </td>
+
+    </tr>
+  <% end %>
+  </table>
+
+ <h4>II. LISTA CONTINUA DE CELULARES</h4>
+
+  <table>
+  <tr>
+	<td>
+	<%  @parejas_tel_celulares.each do |pareja| %>
+		<%=h pareja.movil_el %>,
+        <%=h pareja.movil_ella %>,
+  	<% end %>
+  	</td>
+  </tr>
+  </table>
+
+
+</div>
+
+<br />

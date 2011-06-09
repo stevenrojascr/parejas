@@ -1,4 +1,6 @@
 Parejas::Application.routes.draw do
+  resources :roles
+
   devise_for :users
   resources :users
 
@@ -10,6 +12,7 @@ Parejas::Application.routes.draw do
   match "/parejas_activas" => "reportes#parejas_activas"
   match "/parejas_activas_info" => "reportes#parejas_activas_info"
   match "/aniversarios_mes" => "reportes#parejas_aniversarios_mes"
+  match "/parejas_tel_celulares" => "reportes#parejas_tel_celulares"
   
   match "/asistencia" => "eventos#asistencia"
 
