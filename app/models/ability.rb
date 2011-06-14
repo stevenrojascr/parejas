@@ -6,9 +6,15 @@ class Ability
 		if user.role? :Administrador
 			can :manage, :all
 		elsif user.role? :Pastoreo
-			can :manage, [Pareja, User]
+			can :index, Pareja
+		elsif user.role? :PastoreoBaseDatos
+			can :manage, [Pareja, Evento]
+		elsif user.role? :CoordinadorGeneral
+			can :read, [Pareja, Evento]
+		elsif user.role? :CoordinadorMinisterio
+			can :read, [Pareja, Evento]
 		else 
-			can :read, :all
+			can :index, Pareja
 		end
 	end
 end

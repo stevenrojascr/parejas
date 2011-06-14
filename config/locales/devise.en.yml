@@ -17,6 +17,7 @@ en:
       invalid_token: 'Token de autenticación incorrectos.'
       timeout: 'Su sesión expiró, ingrese de nuevo para continuar.'
       inactive: 'Su cuenta no ha sido activada todavía.'
+
     sessions:
       link: 'Ingresar'
       signed_in: 'Has ingresado correctamente.'

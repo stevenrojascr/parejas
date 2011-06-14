@@ -6,7 +6,20 @@
 # Spanish as spoken in Colombia (es-CO) translations for Rails
 
 #es-CO:
+
+
 en:
+
+  unauthorized:
+      manage:
+        all: "No está autorizado para ejecutar esta opción."
+      show:
+        pareja: "No está autorizado para ingresar a la información detallada de las parejas."
+      edit:
+        pareja: "No está autorizado para modificar parejas."
+      destroy:
+        pareja: "No está autorizado para borrar parejas."
+
   number:
     percentage:
       format:

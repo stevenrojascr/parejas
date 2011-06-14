@@ -35,7 +35,7 @@
           <dd><%=h pareja.movil_ella %></dd>
         </dl>
       </td>
-
+	  <% if can? :show, Pareja %>
 		<td class="lista-acciones">
 			<%= link_to 'Asistencia', asistencia_pareja_path(:id => pareja.id) %><br/>
 			<% if true %>
@@ -46,6 +46,7 @@
                    :method => :delete %>
 			<% end %>
 		</td>
+	  <% end %>
 	
     </tr>
   <% end %>
