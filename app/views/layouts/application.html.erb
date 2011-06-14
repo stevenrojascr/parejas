@@ -18,7 +18,7 @@
 		<table>
 		  <tr>
 			<td id="link-menu">  <%= link_to 'Parejas', parejas_path %> </td>
-			<% if can? :read, Evento %>
+			<% if can? :index, Evento %>
 				<td id="link-menu"> <%= link_to 'Asambleas', eventos_path %> </td>
 			<% end %>
 			<td id="link-menu"> <%= link_to 'Hoja de Asistencia', hoja_asistencia_path %> </td>

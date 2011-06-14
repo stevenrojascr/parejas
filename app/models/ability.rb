@@ -12,7 +12,7 @@ class Ability
 		elsif user.role? :CoordinadorGeneral
 			can [:read, :asistencia], [Pareja, Evento]
 		elsif user.role? :CoordinadorMinisterio
-			can [:read, :asistencia], [Pareja, Evento]
+			can [:index, :asistencia], [Pareja, Evento]
 		else 
 			can :index, Pareja
 		end
