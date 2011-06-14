@@ -35,18 +35,23 @@
           <dd><%=h pareja.movil_ella %></dd>
         </dl>
       </td>
-	  <% if can? :show, Pareja %>
+
 		<td class="lista-acciones">
-			<%= link_to 'Asistencia', asistencia_pareja_path(:id => pareja.id) %><br/>
-			<% if true %>
-        		<%= link_to 'Mostrar', pareja %><br/>
+			<% if can? :asistencia, Pareja %>
+				<%= link_to 'Asistencia', asistencia_pareja_path(:id => pareja.id) %><br/>
+			<% end %>
+			<% if can? :show, Pareja %>
+				<%= link_to 'Mostrar', pareja %><br/>
+			<% end %>
+			<% if can? :edit, Pareja %>
 				<%= link_to 'Editar', edit_pareja_path(pareja) %><br/>
-        		<%= link_to 'Borrar', pareja, 
+			<% end %>
+			<% if can? :destroy, Pareja %>
+			     <%= link_to 'Borrar', pareja, 
                     :confirm => 'Está seguro?',
                    :method => :delete %>
 			<% end %>
 		</td>
-	  <% end %>
 	
     </tr>
   <% end %>
