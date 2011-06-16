@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     before_filter :authenticate_user! #, :except => :index
-#    load_and_authorize_resource
+    load_and_authorize_resource
   
   # GET /users
   # GET /users.xml
@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
+    @current_method = "new"
 
     respond_to do |format|
       format.html # new.html.erb
