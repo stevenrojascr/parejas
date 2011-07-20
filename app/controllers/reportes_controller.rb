@@ -38,6 +38,10 @@ class ReportesController < ApplicationController
 	def parejas_tel_celulares
     	@parejas_tel_celulares = Pareja.find(:all, :conditions => "activo='t'")
 	end
+	
+	def eventos_asistencia
+	  @eventos = Evento.all.last(26)
+	end
 
    
 end

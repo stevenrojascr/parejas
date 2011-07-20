@@ -44,5 +44,14 @@ class Pareja < ActiveRecord::Base
   
   default_scope :order => 'codigo'
   
+  def self.find_parejas_nuevas_fecha (fecha)
+    if Rails.env.production? 
+      #Solo para PostGreSQL. Parece que Heroku hace dump del Sqlite3 a PostGreSQL que es lo utiliza Heroku.
+    else
+      #Solo para SQLite3. Pero Heroku usa PostGreSQL  
+        find(:all, :conditions => ["fch_1era_asamblea = ?",fecha])
+    end
+  end
+  
 end
 

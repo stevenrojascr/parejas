@@ -26,6 +26,7 @@
 			<td id="link-menu"> <%= link_to 'Información de Parejas Activas', parejas_activas_info_path %> </td>
 			<td id="link-menu"> <%= link_to 'Aniversarios del Mes', aniversarios_mes_path %> </td>
 			<td id="link-menu"> <%= link_to 'Celulares', parejas_tel_celulares_path %> </td>
+			<td id="link-menu"> <%= link_to 'Asistencia por Asamblea', eventos_asistencia_path %> </td>
 			<% if can? :read, User %>
 				<td id="link-menu"> <%= link_to 'Usuarios', users_path %> </td>
 			<% end %>

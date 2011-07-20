@@ -1,0 +1,36 @@
+<div id="pareja-lista-repo">
+  <h3>Asistencia para las últimas 26 asambleas -  Fecha: <%= Date.today ("%d/%m/%Y") %></h3>
+
+  <table>
+	<th>No.</th>
+	<th>Fecha</th>
+	<th>Asistencia</th>
+	<th>Parejas Nuevas</th>
+
+	<% @eventos.each do |evento| %>
+    <tr class="<%= cycle('lista-linea-impar', 'lista-linea-par-repo') %>">
+
+      <td>
+		<%=h evento.codigo %>
+      </td>
+
+      <td>
+        <%=h evento.fecha %>
+      </td>
+
+      <td>
+        <%=h evento.parejas.count %>
+      </td>
+
+      <td>
+        <%=h Pareja.find_parejas_nuevas_fecha (evento.fecha).count %>
+      </td>
+
+
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
