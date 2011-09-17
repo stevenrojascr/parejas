@@ -10,16 +10,8 @@ class ReportesController < ApplicationController
     @fch_proximo_viernes = viernes
   end
 
-#  def parejas_activas
-#    @parejas = Pareja.find(:all, :conditions => "activo='t'")
-#  end
-
   def parejas_activas
     @parejas = Pareja.find(:all, :conditions => "activo='t'")
-
-# Linea para usar con reporte de parejas con retiro 1 ordenadas por fecha de 1era asamblea
-# @parejas = Pareja.unscoped.order("fch_1era_asamblea").find(:all, :conditions => [" retiro1='t'"]) 
-
   end
 
   def parejas_activas_info
@@ -35,11 +27,10 @@ class ReportesController < ApplicationController
       @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and (date_part('month', fch_nac_el) = ?)", mes])
       @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and (date_part('month', fch_nac_ella) = ?)", mes])
     else
-      #Solo para SQLite3. Pero Heroku usa PostGreSQL
-      mes = Date.today.strftime("%m")   
-      @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_matrimonio) = ?", mes ])
-      @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_el) = ?", mes ])
-      @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_ella) = ?", mes ])
+      #Solo para SQLite3. Pero Heroku usa PostGreSQL  
+      @parejas_aniv_matrimonio = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_matrimonio) = ?", Date.today.strftime("%m")])
+      @parejas_aniv_el = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_el) = ?", Date.today.strftime("%m")])
+      @parejas_aniv_ella = Pareja.find(:all, :conditions => ["activo='t' and STRFTIME('%m', fch_nac_ella) = ?", Date.today.strftime("%m")])
     end
 
   end
