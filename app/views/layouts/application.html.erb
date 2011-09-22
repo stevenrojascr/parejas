@@ -15,31 +15,26 @@
 	<div id="banner">
 		<%= image_tag("logo_matrimonios.jpg")%>
 		<%= @page_title || "Matrimonios en Victoria - Pozos"%>
-		<table>
-		  <tr>
-			<td id="link-menu">  <%= link_to 'Parejas', parejas_path %> </td>
-			<% if can? :index, Evento %>
-				<td id="link-menu"> <%= link_to 'Asambleas', eventos_path %> </td>
-			<% end %>
-			<td id="link-menu"> <%= link_to 'Hoja de Asistencia', hoja_asistencia_path %> </td>
-			<td id="link-menu"> <%= link_to 'Asistencia de Parejas Activas', parejas_activas_path %> </td> 
-			<td id="link-menu"> <%= link_to 'Información de Parejas Activas', parejas_activas_info_path %> </td>
-			<td id="link-menu"> <%= link_to 'Aniversarios del Mes', aniversarios_mes_path %> </td>
-			<td id="link-menu"> <%= link_to 'Celulares', parejas_tel_celulares_path %> </td>
-			<td id="link-menu"> <%= link_to 'Asistencia por Asamblea', eventos_asistencia_path %> </td>
-			<% if can? :read, User %>
-				<td id="link-menu"> <%= link_to 'Usuarios', users_path %> </td>
-			<% end %>
-		  </tr>
-		</table>
 	</div>
-	
+
 	<div id="user_nav">
 	  <% if user_signed_in? %>
 	    Usuario <%= current_user.email %>.
 	    <%= link_to "Salir", destroy_user_session_path %>
 	  <% else %>
 	  <% end %>
+	</div>
+	
+	<div>
+		<table>
+			<td>
+				<%= render_navigation :level => 1 %>
+			</td>
+			<td>
+				<%= active_navigation_item_name(:level => 1) %>
+				<%= render_navigation :level => 2 %>
+			</td>
+		</table>
 	</div>
 	
 	<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>

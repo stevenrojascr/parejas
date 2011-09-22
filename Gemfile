@@ -7,6 +7,7 @@ gem 'aws-s3'
 gem 'pdfkit'
 gem 'devise'
 gem 'cancan'
+gem 'simple-navigation'
 
 group :development do
 #	gem 'rspec-rails', '2.0.0.beta.19'

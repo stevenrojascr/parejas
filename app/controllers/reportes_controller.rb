@@ -16,6 +16,7 @@ class ReportesController < ApplicationController
 
   def parejas_activas
     @parejas = Pareja.find(:all, :conditions => "activo='t'")
+    render_navigation
 
 # Linea para usar con reporte de parejas con retiro 1 ordenadas por fecha de 1era asamblea
 # @parejas = Pareja.unscoped.order("fch_1era_asamblea").find(:all, :conditions => [" retiro1='t'"]) 
