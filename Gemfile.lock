@@ -28,7 +28,6 @@ GEM
       activemodel (= 3.0.0)
       activesupport (= 3.0.0)
     activesupport (3.0.0)
-    annotate-models (1.0.4)
     arel (1.0.1)
       activesupport (~> 3.0.0)
     aws-s3 (0.6.2)
@@ -95,7 +94,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotate-models
   aws-s3
   cancan
   devise
