@@ -12,7 +12,7 @@ gem 'haml-rails'
 
 group :development do
 #	gem 'rspec-rails', '2.0.0.beta.19'
-	gem 'annotate-models', '1.0.4'
+#	gem 'annotate-models', '1.0.4'
 end
 
 group :test do
