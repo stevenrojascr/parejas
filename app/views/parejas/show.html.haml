@@ -1,0 +1,76 @@
+%p
+  = image_tag @pareja.foto.url (:medium)
+%p
+  %b Código:
+  = @pareja.codigo
+  %b Fecha 1era asamblea:
+  = @pareja.fch_1era_asamblea
+%fieldset
+  %legend DATOS DEL ESPOSO
+  %p
+    %b Nombre:
+    = @pareja.nom_el
+    %b Fecha de nacimiento:
+    = @pareja.fch_nac_el
+  %p
+    %b Ocupación:
+    = @pareja.ocupacion_el
+  %p
+    %b Teléfono celular:
+    = @pareja.movil_el
+    %b Correo electrónico:
+    = @pareja.email_el
+%fieldset
+  %legend DATOS DE LA ESPOSA
+  %p
+    %b Nombre:
+    = @pareja.nom_ella
+    %b Fecha de nacimiento:
+    = @pareja.fch_nac_ella
+  %p
+    %b Ocupación:
+    = @pareja.ocupacion_ella
+  %p
+    %b Teléfono celular:
+    = @pareja.movil_ella
+    %b Correo electrónico:
+    = @pareja.email_ella
+%fieldset
+  %legend DATOS DE AMBOS
+  %p
+    %b Fecha de matrimonio:
+    = @pareja.fch_matrimonio
+  %p
+    %b Lugar de residencia:
+    = @pareja.residencia
+    %b Teléfono de la casa:
+    = @pareja.tel_casa
+%fieldset
+  %legend OTROS DATOS
+  %p
+    %b Hijos vivos:
+    = @pareja.hijos_vivos
+    %b Pérdidas:
+    = @pareja.perdidas
+  %p
+    %b Invitados por:
+    = @pareja.invitados_por
+    %b Ministerio:
+    = @pareja.ministerio
+  %p
+    %b Situación especial:
+    = @pareja.situacion_especial
+  %p
+    %b Retiro1:
+    = @pareja.retiro1
+    %b Retiro2:
+    = @pareja.retiro2
+    %b Retiro3:
+    = @pareja.retiro3
+    %b Retiro4:
+    = @pareja.retiro4
+    %b Activo:
+    = @pareja.activo
+= link_to 'Modificar', edit_pareja_path(@pareja)
+|
+\#{link_to 'Anterior', parejas_path}

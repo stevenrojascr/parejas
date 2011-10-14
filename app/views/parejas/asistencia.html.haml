@@ -1,0 +1,27 @@
+%h1 Asistencia de la Pareja
+%p
+  = image_tag @pareja.foto.url (:medium)
+%p
+  %b Código:
+  = @pareja.codigo
+  %b Fecha 1era asamblea:
+  = @pareja.fch_1era_asamblea
+  %b Esposo:
+  = @pareja.nom_el
+  %b Esposa:
+  = @pareja.nom_ella
+- eventos = @pareja.eventos
+%p
+  %b Total de asambleas:
+  = eventos.count
+#pareja-lista-repo
+  %table
+    %th No.
+    %th Fecha
+    - eventos.each do |evento|
+      %tr{:class => cycle('lista-linea-impar', 'lista-linea-par-repo')}
+        %td
+          = h evento.codigo
+        %td
+          = h evento.fecha
+= link_to 'Anterior', parejas_path

@@ -8,11 +8,15 @@ gem 'pdfkit'
 gem 'devise'
 gem 'cancan'
 gem 'simple-navigation'
-gem 'haml-rails'
+gem 'haml'
+
 
 group :development do
 #	gem 'rspec-rails', '2.0.0.beta.19'
 #	gem 'annotate-models'
+	gem 'haml-rails'
+	gem 'hpricot'
+	gem 'ruby_parser'
 end
 
 group :test do

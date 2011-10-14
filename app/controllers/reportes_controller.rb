@@ -3,7 +3,12 @@ class ReportesController < ApplicationController
 
    
   def index
-    @parejas = Pareja.find(:all, :conditions => "activo='t'")
+    # Linea para mostrar parejas ordenadas por número de pareja
+    #     @parejas = Pareja.find(:all, :conditions => "activo='t'")
+
+    # Linea para mostrar parejas ordenadas por nombre del esposo
+    @parejas = Pareja.unscoped.order("nom_el").find(:all, :conditions => ["activo='t'"]) 
+
     hoy = Date.today
     viernes = hoy.at_beginning_of_week.advance(:days => 4)
     viernes = viernes.advance(:weeks => 1) if hoy > viernes
