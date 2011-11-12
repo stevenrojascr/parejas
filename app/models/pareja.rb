@@ -42,7 +42,7 @@ class Pareja < ActiveRecord::Base
   :bucket => 'fotosparejas',
   :default_url => '/images/:attachment/silueta_:style.jpg'
   
-  scope :activas, where("activo = 't'")
+  scope :activas, lambda { where("activo = 't'")}
   scope :ordenadas_por_codigo, order("codigo")
   scope :ordenadas_por_nom_el, order("nom_el") 
   
