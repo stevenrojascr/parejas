@@ -7,7 +7,7 @@ class ReportesController < ApplicationController
     #     @parejas = Pareja.activas.ordenadas_por_codigo
 
     # Linea para mostrar parejas ordenadas por nombre del esposo
-    @parejas = Pareja.find(:all).limit(10)
+    @parejas = Pareja.limit(10)
 
     hoy = Date.today
     viernes = hoy.at_beginning_of_week.advance(:days => 4)
