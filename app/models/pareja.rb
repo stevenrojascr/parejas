@@ -42,7 +42,10 @@ class Pareja < ActiveRecord::Base
   :bucket => 'fotosparejas',
   :default_url => '/images/:attachment/silueta_:style.jpg'
   
-  default_scope :order => 'codigo'
+  scope :activas, where("activo = 't'")
+  scope :ordenadas_por_codigo, order("codigo")
+  scope :ordenadas_por_nom_el, order("nom_el") 
+  
   
   def self.find_parejas_nuevas_fecha (fecha)
     if Rails.env.production? 

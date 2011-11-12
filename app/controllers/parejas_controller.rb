@@ -7,9 +7,9 @@ class ParejasController < ApplicationController
   # GET /parejas.xml
   def index
     if params[:incluir_inactivas].blank?
-      @parejas = Pareja.find(:all, :conditions => "activo = 't'")
+      @parejas = Pareja.activas.ordenadas_por_codigo #solo parejas activas
     else
-      @parejas = Pareja.find(:all) #Todas las parejas
+      @parejas = Pareja.ordenadas_por_codigo #Todas las parejas
     end
 
     respond_to do |format|

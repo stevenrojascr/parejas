@@ -4,10 +4,10 @@ class ReportesController < ApplicationController
    
   def index
     # Linea para mostrar parejas ordenadas por número de pareja
-    #     @parejas = Pareja.find(:all, :conditions => "activo='t'")
+    #     @parejas = Pareja.activas.ordenadas_por_codigo
 
     # Linea para mostrar parejas ordenadas por nombre del esposo
-    @parejas = Pareja.unscoped.order("nom_el").find(:all, :conditions => ["activo='t'"]) 
+    @parejas = Pareja.activas.ordenadas_por_nom_el
 
     hoy = Date.today
     viernes = hoy.at_beginning_of_week.advance(:days => 4)
@@ -15,12 +15,9 @@ class ReportesController < ApplicationController
     @fch_proximo_viernes = viernes
   end
 
-#  def parejas_activas
-#    @parejas = Pareja.find(:all, :conditions => "activo='t'")
-#  end
 
   def parejas_activas
-    @parejas = Pareja.find(:all, :conditions => "activo='t'")
+    @parejas = Pareja.activas.ordenadas_por_codigo
     render_navigation
 
 # Linea para usar con reporte de parejas con retiro 1 ordenadas por fecha de 1era asamblea
@@ -29,7 +26,7 @@ class ReportesController < ApplicationController
   end
 
   def parejas_activas_info
-    @parejas = Pareja.find(:all, :conditions => "activo='t'")
+    @parejas = Pareja.activas.ordenadas_por_codigo
   end
   
   def parejas_aniversarios_mes
@@ -51,7 +48,7 @@ class ReportesController < ApplicationController
   end
   
 	def parejas_tel_celulares
-    	@parejas_tel_celulares = Pareja.find(:all, :conditions => "activo='t'")
+    	@parejas_tel_celulares = Pareja.activas.ordenadas_por_codigo
 	end
 	
 	def eventos_asistencia
