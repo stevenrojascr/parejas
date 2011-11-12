@@ -11,7 +11,7 @@ class ReportesController < ApplicationController
 
     hoy = Date.today
     viernes = hoy.at_beginning_of_week.advance(:days => 4)
-    viernes = viernes.advance(:weeks => 4) if hoy > viernes
+    viernes = viernes.advance(:weeks => 1) if hoy > viernes
     @fch_proximo_viernes = viernes
   end
 
