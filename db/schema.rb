@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110525173059) do
+ActiveRecord::Schema.define(:version => 20111201225923) do
 
   create_table "eventos", :force => true do |t|
     t.string    "codigo"
     t.date      "fecha"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.integer   "pareja_llevo_virgen"
   end
 
   create_table "eventos_parejas", :id => false, :force => true do |t|
@@ -59,9 +60,9 @@ ActiveRecord::Schema.define(:version => 20110525173059) do
   end
 
   create_table "roles", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "roles_users", :id => false, :force => true do |t|

@@ -38,6 +38,14 @@
 			<% end %>
 		<% end %>
       </td>
+	<td style="border: none; background: #ffffff">
+		<% if pareja.id == @pareja_llevo_virgen then%>
+			<%=h "Traen Virgen/"%>
+			<%=h pareja.movil_el%> <%=h "/"%>
+			<%=h pareja.movil_ella%> <%=h "/"%>
+			<%=h pareja.tel_casa%> 
+		<% end %>
+	</td>
 
     </tr>
   <% end %>

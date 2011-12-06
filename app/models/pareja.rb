@@ -31,6 +31,7 @@
 #  updated_at         :timestamp
 #  situacion_especial :string(255)
 #  activo             :boolean
+#  pareja_llevo_virgen :integer
 #
 
 class Pareja < ActiveRecord::Base

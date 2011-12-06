@@ -13,6 +13,8 @@ class ReportesController < ApplicationController
     viernes = hoy.at_beginning_of_week.advance(:days => 4)
     viernes = viernes.advance(:weeks => 1) if hoy > viernes
     @fch_proximo_viernes = viernes
+    
+    @pareja_llevo_virgen = Evento.where("pareja_llevo_virgen IS NOT NULL").last.pareja_llevo_virgen
   end
 
 

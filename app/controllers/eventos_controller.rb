@@ -60,6 +60,9 @@ class EventosController < ApplicationController
   # PUT /eventos/1.xml
   def update
     params[:evento][:pareja_ids] ||= []
+#    params[:evento][:pareja_llevo_virgen] ||= []
+    
+#    @evento.pareja_llevo_virgen = params[:evento_virgen][:pareja_id]
     
     @evento = Evento.find(params[:id])
 
