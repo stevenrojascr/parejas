@@ -4,11 +4,11 @@
     %title Parejas
     / START:stylesheet
     = stylesheet_link_tag "scaffold"
-    = stylesheet_link_tag "parejas", :media => "all"
+    = stylesheet_link_tag "parejas_reportes", :media => "all"
     / END:stylesheet
     = javascript_include_tag :defaults
     = csrf_meta_tag
   %body
-    #banner
+    #banner-repo
       = @page_title || "Matrimonios en Victoria - Pozos"
     = yield

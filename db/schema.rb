@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111201225923) do
+ActiveRecord::Schema.define(:version => 20120125041903) do
 
   create_table "eventos", :force => true do |t|
     t.string    "codigo"
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20111201225923) do
     t.string    "foto_content_type"
     t.integer   "foto_file_size"
     t.timestamp "foto_updated_at"
+    t.boolean   "selected"
   end
 
   create_table "roles", :force => true do |t|

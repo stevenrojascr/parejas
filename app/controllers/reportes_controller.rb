@@ -56,6 +56,11 @@ class ReportesController < ApplicationController
 	def eventos_asistencia
 	  @eventos = Evento.all.last(26)
 	end
+	
+  def parejas_seleccionadas_info
+    @parejas = Pareja.seleccionadas.ordenadas_por_codigo
+  end
+
 
    
 end

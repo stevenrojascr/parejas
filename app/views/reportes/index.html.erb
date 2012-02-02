@@ -1,16 +1,15 @@
 <div id="pareja-lista-repo">
-  <h3>Registro de Asistencia - <%= @fch_proximo_viernes.strftime("%d/%m/%Y") %></h3>
+  <h5>Registro de Asistencia - <%= @fch_proximo_viernes.strftime("%d/%m/%Y") %></h5>
 
-  <h5 style="text-align:right">La columna F indica si Ya tiene FOTO o No</h5>
   <table>
 	<th>No.</th>
 	<th>Hoy</th>
 	<th>Esposo</th>
 	<th>Esposa</th>
-	<th>F</th>
+	<th>Foto</th>
 
 	<% @parejas.each do |pareja| %>
-    <tr class="<%= cycle('lista-linea-impar', 'lista-linea-par-repo') %>">
+    <tr class="<%= cycle('lista-linea-impar-repo', 'lista-linea-par-repo') %>">
 
       <td>
 		<%=h pareja.codigo %>
@@ -38,14 +37,12 @@
 			<% end %>
 		<% end %>
       </td>
-	<td style="border: none; background: #ffffff">
+	<td>
 		<% if pareja.id == @pareja_llevo_virgen then%>
-			<%=h "Traen Virgen/"%>
-			<%=h pareja.movil_el%> <%=h "/"%>
-			<%=h pareja.movil_ella%> <%=h "/"%>
-			<%=h pareja.tel_casa%> 
+			<%=h "Traen Virgen"%>
 		<% end %>
 	</td>
+
 
     </tr>
   <% end %>

@@ -1,0 +1,96 @@
+/* Estilos para parejas/index */ 
+#pareja-lista table { 
+border-collapse: collapse; 
+} 
+#pareja-lista table tr td { 
+padding: 5px; 
+vertical-align: top; 
+
+} 
+
+#pareja-lista .lista-codigo {
+
+}
+#pareja-lista .lista-codigo dl { 
+margin: 0; 
+}
+#pareja-lista .lista-codigo dt { 
+color: #244; 
+font-weight: bold; 
+font-size: larger; 
+width: 95px;
+}
+#pareja-lista .lista-codigo dd { 
+margin: 0; 
+}
+#pareja-lista .lista-imagen { 
+width: 60px; 
+height: 70px; 
+} 
+#pareja-lista .lista-nombre { 
+width: 40%; 
+} 
+#pareja-lista .lista-nombre dl { 
+margin: 0; 
+} 
+#pareja-lista .lista-nombre dt { 
+color: #244; 
+font-weight: bold; 
+font-size: larger; 
+} 
+
+#pareja-lista .lista-nombre dd { 
+margin: 0; 
+} 
+#pareja-lista .lista-acciones { 
+font-size: x-small; 
+text-align: right; 
+padding-left: 1em; 
+} 
+#pareja-lista .lista-linea-par { 
+background: #e0f8f8; 
+}
+
+#pareja-lista .lista-linea-impar { 
+background: #ffffff; 
+}
+
+
+#pareja-lista-repo table { 
+border-collapse: collapse; 
+} 
+#pareja-lista-repo table tr td { 
+padding: 1px; 
+vertical-align: top;
+border:1px solid black; 
+font-size: smaller;
+}
+#pareja-lista-repo .lista-linea-par-repo { 
+background: #cccccc; 
+}
+#pareja-lista-repo .lista-linea-impar-repo { 
+background: #ffffff; 
+} 
+
+/* Estilos para banner */
+
+#banner-repo {
+  background: #ffffff;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid;
+  font: small-caps 20px/20px "Times New Roman", serif;
+  text-align: center;
+}
+
+#banner img {
+	width: 45px; 
+	height: 40px;
+	float: left;
+}
+
+#link-menu {
+	font-size: 60%; 
+	text-align: right; 
+	padding-left: 1em; 
+	}

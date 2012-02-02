@@ -44,6 +44,7 @@ class Pareja < ActiveRecord::Base
   :default_url => '/images/:attachment/silueta_:style.jpg'
   
   scope :activas, where("activo = 't'")
+  scope :seleccionadas, where("selected = 't'")
   scope :ordenadas_por_codigo, order("codigo")
   scope :ordenadas_por_nom_el, order("nom_el") 
   

@@ -11,6 +11,7 @@ Parejas::Application.routes.draw do
   match "/hoja_asistencia" => "reportes#index"
   match "/parejas_activas" => "reportes#parejas_activas"
   match "/parejas_activas_info" => "reportes#parejas_activas_info"
+  match "/parejas_seleccionadas_info" => "reportes#parejas_seleccionadas_info"
   match "/aniversarios_mes" => "reportes#parejas_aniversarios_mes"
   match "/parejas_tel_celulares" => "reportes#parejas_tel_celulares"
   match "/eventos_asistencia" => "reportes#eventos_asistencia"
